@@ -1,5 +1,5 @@
 import os
-# 1- Écrire dans un sous repertoire
+# 1- Écrire en mode ajout
 
 chemin = "C:\\Users\\" + os.getlogin() +"\\PycharmProjects\\ExempleGestionDeFichiers\\"
 #  / sur linux au lieu \\
@@ -14,9 +14,14 @@ print("==>" + os.getcwd())
 if not os.path.exists(chemin2):
     os.mkdir(chemin2)
 
-nomFichier = chemin2 + "monFichier3.txt"
-f =open(nomFichier, 'w')
-f.write("Bonjour.....")
+nomFichier = chemin2 + "monFichier.txt"
+f =open(nomFichier, 'a')
+f.write("\n ligne a ajouter")
+
+f.write("\n")
+for i in range(10):
+    f.write(str(i) + "\n")
+
 f.close()
 
 

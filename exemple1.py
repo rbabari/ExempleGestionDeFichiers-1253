@@ -6,7 +6,7 @@ chemin = "C:\\Users\\" + os.getlogin() +"\\PycharmProjects\\ExempleGestionDeFich
 nomFichier = chemin + "monFichier.txt"
 print(nomFichier)
 f =open(nomFichier, 'w')
-contenu = f.write("Bonjour...")
+f.write("Bonjour...")
 f.close()
 
 
